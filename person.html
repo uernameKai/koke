@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" width="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index-styles.css">
+  <link rel="stylesheet" href="person-styles.css">
+  <title>个人介绍 - My Personal Blog</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1><a href="#">My Blog</a></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="index.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <main id="person-section">
+    <article class="person-article">
+      <h2>个人介绍</h2>
+      <img id="profile-img" src="img/00007-3383791648.png" alt="个人形象照片" width="200" onclick="showImageFullsize(this)">
+      <div class="container">
+       
+        <div class="personal-info">
+            <h2>个人信息</h2>
+            <p>姓名：王源凯<br>
+            性别：男<br>
+            年龄:20岁<br>
+            民族：汉族<br>
+            政治面貌：团员<br>
+            住址：山西忻州<br>
+            联系方式：<br>
+            电话:17835022519<br>
+            邮箱:3044459020@qq.com<br>
+            微信:MYzj983<br>
+            兴趣爱好：电影、唱歌、画画</p>
+        </div>
+        <div class="project-experience">
+           
+          <div>
+            <h2>项目经历</h2>
+            <h3>百度飞桨-文心一言大模型开发</h3>
+            <p>基于百度飞桨文心一言进行大模型创作，开发了一个穿搭助手，根据用户需求进行深度分析设计，结合用户身材、性格特点、场合氛围、季节天气等因素进行综合性分析，定制个性化搭配方案。该模型及开发流程通过了百度测试和审核，获赞百余次，并取得百度飞桨官方认证获奖证书。</p>
+        
+            <h3>智能汽车巡航训练</h3>
+            <p>OCR识别板块、侧面识别板块、巡航模型训练板块负责人。进行文字识别和图像识别训练，数据集包含印刷体、手写体、图片类型等。要求识别并按照指令进行操作，多线程调用较复杂，用ROS实现多个板块一起调用，实现OCR识别与反馈操作功能的实现。</p>
+        
+            <h3>抖音店铺运营管理</h3>
+            <p>某服装品牌抖店运维人员，通过巨量引擎进行数据分析、关联、预测等，结合当下热点进行作品设计和引流。与后端技术与前端设计相结合，利用平台流量机制和运作规则，进行维护及动态调整，以持续化店铺运营。</p>
+        </div>
+            </div>
+            <!-- 可以添加更多项目 -->
+        </div>
+        <div class="education">
+            
+            <h2>教育背景</h2>
+            <p>学校：成都锦城学院<br>
+            专业：数字媒体技术<br>
+            方向：前端开发方向<br>
+            时间:2022.09-今</p>
+        
+            <!-- 注意：原图中“PHON”专业可能是个误打或者占位符，这里已更正为“数据科学与大数据技术” -->
+        </div>
+        <div class="skills">
+            <h2>个人技能</h2>
+            <ul>
+                <li>计算机使用及编程</li>
+                <li>团队管理、统筹规划</li>
+                <li>社交能力</li>
+                <!-- 可以添加更多技能 -->
+            </ul>
+        </div>
+        <!-- 可以添加更多部分，如校园经历、个人优势、荣誉奖项等 -->
+         <div>
+        
+    </div>
+    </article>
+  </main>
+
+  <dialog id="image-modal">
+    <img id="modal-img" src="" alt="Fullsize Image" width="800">
+    <button onclick="closeModal()">关闭</button>
+  </dialog>
+
+  <footer>
+    <div class="footer-columns">
+      <div class="column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="index.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Contact Info</h3>
+        <p>Email: info@myblog.com</p>
+        <p>Phone: 123-456-7890</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2024 My Blog. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showImageFullsize(img) {
+      const modal = document.getElementById('image-modal');
+      const modalImg = document.getElementById('modal-img');
+      modalImg.src = img.src;
+      modal.showModal();
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('image-modal');
+      modal.close();
+    }
+  </script>
+</body>
+
+</html>

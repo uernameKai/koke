@@ -1,0 +1,175 @@
+/* 通用样式重置与基础设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* 设置页面整体字体，方便统一文字风格 */
+    line-height: 1.6; /* 行高设置，让文字排版更舒适 */
+}
+
+
+
+/* 主体内容区域样式 */
+main {
+    padding: 20px;
+}
+
+.entrepreneurship-section {
+    margin-bottom: 30px;
+}
+
+.entrepreneurship-post {
+    border: 1px solid #e0e0e0; /* 文章添加边框，区分不同文章块 */
+    border-radius: 8px; /* 文章块设置圆角，更美观 */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 文章块添加淡淡的阴影 */
+    transition: transform 0.3s ease; /* 鼠标悬停时文章块有放大效果的过渡 */
+}
+
+.entrepreneurship-post:hover {
+    transform: scale(1.02); /* 鼠标悬停时文章块稍微放大，增加交互感 */
+}
+
+.entrepreneurship-post figure {
+    margin-bottom: 15px;
+}
+
+.entrepreneurship-post figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* 图片设置圆角，与文章块风格统一 */
+}
+
+.entrepreneurship-post figure figcaption {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+}
+
+.entrepreneurship-post h3 {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.entrepreneurship-post p {
+    color: #555;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around; /* 让各列在水平方向均匀分布 */
+    flex-wrap: wrap; /* 当屏幕变窄时，列可以换行显示 */
+}
+
+.column {
+    flex: 1; /* 各列平均分配宽度，可根据实际需求调整占比 */
+    min-width: 200px; /* 每列最小宽度，避免太窄内容显示错乱 */
+    margin-bottom: 20px;
+}
+
+.column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.column ul {
+    list-style-type: none;
+}
+
+.column ul li a {
+    text-decoration: none;
+    color: #ccc; /* 页脚链接文字颜色 */
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.column ul li a:hover {
+    color: #fff; /* 页脚链接鼠标悬停时变色 */
+}
+
+.social-icons li {
+    display: inline-block; /* 让社交图标在一行显示 */
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* 社交图标鼠标悬停时变色 */
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 模态框样式 */
+.modal-content.custom-modal {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.modal-header.custom-modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modal-footer.custom-modal-footer {
+    border-top: 1px solid #dee2e6;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.modal button.btn-close {
+    background-color: transparent;
+    color: #6c757d;
+}
+
+.modal button.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.modal button.btn-secondary:hover {
+    background-color: #5a6268; /* 模态框按钮悬停时加深背景色 */
+}
+
+/* 响应式设计调整 */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* 屏幕变窄时，头部元素垂直排列 */
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column; /* 导航栏菜单垂直排列 */
+        gap: 10px;
+    }
+
+   .footer-columns {
+        flex-direction: column; /* 页脚各列垂直排列 */
+        align-items: center; /* 垂直居中对齐 */
+    }
+}

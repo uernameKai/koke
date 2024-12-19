@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-styles.css">
+    <link rel="stylesheet" href="skill-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Skills</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="#">My Blog</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="skill-section">
+            <h2>My Skills</h2>
+            <article class="skill-item">
+                <!-- <img src="img/1.jpg" alt=""> -->
+                <h3>编程语言</h3>
+                <p>我精通多种编程语言，例如Python、Java和JavaScript。Python使我能够开发各种各样的应用程序，从数据分析脚本到使用诸如Django和Flask等框架开发的网络应用程序。Java非常适合构建健壮的企业级应用程序，而JavaScript则让我能够创建具有交互性和动态性的网页。</p>
+            </article>
+            <article class="skill-item">
+                <h3>网页开发</h3>
+                <p>在网页开发方面，我具备前端和后端技术两方面的技能。我可以使用HTML5、CSS3以及像React或Vue.js这样的现代JavaScript框架来设计美观且用户友好的界面。对于后端，我熟悉Node.js，以及MySQL和MongoDB等数据库，能有效地处理数据存储和检索。</p>
+            </article>
+            <article class="skill-item">
+                <h3>数据分析</h3>
+                <p>在数据分析方面，我能够使用Python中的Pandas和NumPy等工具来收集、清理和分析数据。我还可以使用Matplotlib和Seaborn等库对数据进行可视化处理，以便以清晰易懂的方式呈现见解。此外，我有一些机器学习概念方面的经验，并且能够使用scikit-learn构建简单的预测模型。</p>
+            </article>
+            <article class="skill-item">
+                <h3>软技能</h3>
+                <p>除了技术技能之外，我还具备很强的软技能。我是一名高效的沟通者，能够以书面和口头形式清晰地传达想法。团队合作也是我的一项优势，因为我能与他人良好协作，尊重不同意见并朝着共同目标努力。解决问题也是一项关键技能，它使我能够迅速识别问题并提出切实可行的解决方案。</p>
+            </article> 
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Contact Info</h3>
+                <p>Email: info@myblog.com</p>
+                <p>Phone: 123-456-7890</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 My Blog. All rights reserved.</p>
+    </footer>
+    <script>
+        // 这里可以添加与该页面相关的JavaScript交互逻辑，例如技能展示的动画效果等
+        // 以下是一个简单示例，点击技能标题展开或收起技能描述内容（使用原生JavaScript实现简单的显示隐藏切换）
+        const skillItems = document.querySelectorAll('.skill-item');
+        skillItems.forEach(item => {
+            const h3 = item.querySelector('h3');
+            h3.addEventListener('click', function () {
+                const content = item.querySelector('p');
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

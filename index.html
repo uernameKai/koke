@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>My Personal Blog</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1><a href="#">My Blog</a></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-slider" id="home">
+      <div class="slide">
+        <img src="img/2.gif" alt="Slide 1">
+        <div class="slide-content">
+          <!-- <h2>Explore the World of Knowledge</h2>
+          <p>Discover amazing insights and ideas in our blog.</p>
+          <a href="#" class="btn">Read More</a> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/6fb2e7f8103995bd9aaf02ebdead7ca.jpg" alt="Slide 2">
+       
+      </div>
+      <div class="slide">
+        <img src="img/dbf59773942d777a09ca9364b2e9c9d.jpg" alt="Slide 3">
+       
+      </div>
+    </section>
+
+    <section class="featured-posts" id="about">
+      <h2>人物画像</h2>
+      <div class="post-wrapper">
+        <article class="featured-post">
+          <img src="img/thread_31939290_20190418132350_s_2504699_o_w_480_h_270_73424.webp"Featured Post 1">
+          <div class="post-content">
+            <h3>个人介绍</h3>
+            <p></p>
+            <a href="person.html" class="btn">Read More</a>
+          </div>
+        </article>
+        <article class="featured-post">
+          <img src="img/landa.jpg" alt="Featured Post 2">
+          <div class="post-content">
+            <h3>技能</h3>
+            <p></p>
+            <a href="skill.html" class="btn">Read More</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="recent-posts" id="blog">
+      <h2>行为习惯</h2>
+      <div class="post-grid">
+        <article class="recent-post">
+          <img src="img/dream.jpg" alt="Recent Post 1">
+          <h3>创业计划与思考</h3>
+          <p></p>
+          <a href="think.html" class="btn">Read More</a>
+        </article>
+        <article class="recent-post">
+          <img src="img/408b93fe45b918943d5f8d543757395.png" alt="Recent Post 2">
+          <h3>兴趣爱好和特长</h3>
+          <p></p>
+          <a href="specialty.html" class="btn">Read More</a>
+        </article>
+        <article class="recent-post">
+          <img src="img/d27b715289ad069282c76ea5a5579a7.png" alt="Recent Post 3">
+          <h3>感悟与生活方式</h3>
+          <p></p>
+          <a href="perception.html" class="btn">Read More</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-columns" id="contact">
+      <div class="column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Contact Info</h3>
+        <p>Email: info@myblog.com</p>
+        <p>Phone: 123-456-7890</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2024 My Blog. All rights reserved.</p>
+  </footer>
+  <script>
+    // 获取所有幻灯片元素
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+  
+  // 显示指定索引的幻灯片
+  function showSlide(n) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+  }
+  
+  // 切换到下一张幻灯片
+  function nextSlide() {
+      showSlide(currentSlide + 1);
+  }
+  
+  // 初始时显示第一张幻灯片
+  showSlide(currentSlide);
+  
+  // 每3秒（3000毫秒）切换一次幻灯片，你可以根据需要调整时间间隔
+  setInterval(nextSlide, 3000);
+  
+  
+  const searchInput = document.querySelector('.search-bar input');
+  const searchButton = document.querySelector('.search-bar button');
+  
+  searchButton.addEventListener('click', function () {
+      const searchTerm = searchInput.value.toLowerCase();
+      // 这里可以添加逻辑来根据搜索词筛选文章等内容
+      // 例如遍历文章标题等判断是否包含搜索词，然后显示或隐藏相应文章
+      console.log('执行搜索，搜索词为：', searchTerm);
+  });
+  
+  
+  
+  
+  const navLinks = document.querySelectorAll('nav ul li a');
+  
+  navLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetPage = link.getAttribute('href');
+          // 简单示例，这里只是隐藏所有页面内容，实际可能需要加载对应页面内容
+          document.querySelectorAll('main section').forEach(function (section) {
+              section.style.display = 'none';
+          });
+          if (targetPage === 'index.html') {
+              document.querySelector('main').style.display = 'block';
+          } else if (targetPage === 'about.html') {
+              // 假设你后续会创建about.html对应的页面内容元素并设置id等用于显示隐藏控制
+              document.getElementById('about-section').style.display = 'block';
+          } else if (targetPage === 'blog.html') {
+              document.getElementById('blog-section').style.display = 'block';
+          } else if (targetPage === 'contact.html') {
+              document.getElementById('contact-section').style.display = 'block';
+          }
+      });
+  });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  const images = document.querySelectorAll('img');
+  
+  function lazyLoad() {
+      const windowHeight = window.innerHeight;
+      const scrollY = window.pageYOffset;
+      images.forEach(function (img) {
+          const imgTop = img.offsetTop;
+          if (imgTop < windowHeight + scrollY && imgTop > scrollY) {
+              const src = img.getAttribute('data-src');
+              if (src) {
+                  img.src = src;
+                  img.removeAttribute('data-src');
+              }
+          }
+      });
+  }
+  
+  window.addEventListener('scroll', lazyLoad);
+  window.addEventListener('load', lazyLoad);
+  </script>
+</body>
+
+</html>

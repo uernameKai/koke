@@ -1,0 +1,266 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* 选用一种比较现代的字体 */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* 柔和的背景色 */
+    color: #333; /* 主体文字颜色 */
+}
+
+/* 头部样式 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #2c3e50; /* 深色的头部背景 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 增加一点阴影，凸显层次感 */
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    font-weight: bold; /* 加粗标题字体 */
+    letter-spacing: 1px; /* 增加一点字间距 */
+    transition: all 0.3s ease; /* 过渡效果 */
+}
+
+.logo h1 a:hover {
+    color: #e74c3c; /* 鼠标悬停时改变颜色 */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #bdc3c7; /* 导航链接悬停时的颜色变化 */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px 0 0 25px; /* 输入框左边圆角 */
+    width: 200px; /* 输入框宽度 */
+    font-size: 14px;
+    background-color: white;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #e74c3c; /* 搜索按钮的背景色 */
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0; /* 按钮右边圆角 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #c0392b; /* 搜索按钮悬停时加深颜色 */
+}
+
+/* 主体部分样式 */
+main#person-section {
+    padding: 30px;
+}
+
+.person-article h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #2c3e50; /* 标题颜色与头部呼应 */
+    border-bottom: 2px solid #e74c3c; /* 底部添加下划线装饰 */
+    padding-bottom: 5px;
+}
+
+#profile-img {
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 图片添加阴影 */
+    transition: transform 0.3s ease; /* 添加缩放过渡效果 */
+}
+
+#profile-img:hover {
+    transform: scale(1.05); /* 鼠标悬停时图片稍微放大 */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.personal-info,
+.project-experience,
+.education,
+.skills,
+.campus-experience,
+.personal-advantage,
+.honor-awards {
+    width: 48%;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white; /* 板块背景设为白色 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 增加板块阴影 */
+    transition: box-shadow 0.3s ease; /* 阴影变化过渡效果 */
+}
+
+.personal-info:hover,
+.project-experience:hover,
+.education:hover,
+.skills:hover,
+.campus-experience:hover,
+.personal-advantage:hover,
+.honor-awards:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* 鼠标悬停时加深阴影 */
+}
+
+.personal-info p,
+.project-experience p,
+.education p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* 项目经历中标题样式 */
+.project-experience h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #e74c3c; /* 项目标题用特别颜色突出 */
+}
+
+/* 技能列表样式 */
+.skills ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.skills ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.skills ul li::before {
+    content: "✓"; /* 用对勾符号表示技能具备 */
+    position: absolute;
+    left: 0;
+    color: #27ae60; /* 对勾颜色 */
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-columns.column {
+    width: 30%;
+}
+
+.footer-columns.column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-columns.column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer-columns.column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-columns.column ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-columns.column ul li a:hover {
+    color: #bdc3c7;
+}
+
+.social-icons i {
+    margin-right: 15px;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #e74c3c;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* 图片模态框样式 */
+dialog#image-modal {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    padding: 20px;
+}
+
+#modal-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#image-modal button {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#image-modal button:hover {
+    background-color: #c0392b;
+}

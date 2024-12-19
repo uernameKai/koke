@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-styles.css">
+    <link rel="stylesheet" href="perception-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>感悟与生活方式</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="#">My Blog</a></h1>
+        </div>
+        <nav role="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="reflections-section">
+            <h2>感悟与生活方式</h2>
+            <article class="reflection-post">
+                <img src="img/e8c6fa3eed64183e437004b6f6096c5.jpg" alt="Reflection Post 1" width="300" height="200" title="A picture depicting the simple life">
+                <div class="post-content">
+                    <h3>简单生活的美好</h3>
+                    <time datetime="2024-12-17">2024年12月17日</time>
+                    <p>在一个喧嚣忙碌的世界里，在简单中发现美是一件珍贵的事情。简单的生活并不意味着缺乏刺激，而是对小确幸的欣赏。它可以是早晨的一杯咖啡、在公园散步，或者是与爱人的安静时刻。</p>
+                </div>
+            </article>
+            <article class="reflection-post">
+                <img src="img/2cd6423c64937e0d0d816811dab7251.jpg" alt="Reflection Post 2" width="300" height="200" title="Another relevant picture for the post">
+                <div class="post-content">
+                    <h3>旅行中的自我发现</h3>
+                    <time datetime="2024-12-17">2024年12月17日</time>
+                    <p>旅行不仅仅是去看新的地方，也是自我发现。当我们走出舒适区，沉浸在不同的文化和环境中时，我们会更多地了解自己的优势、劣势以及真正让我们快乐的东西。</p>
+                </div>
+            </article>
+            <article class="reflection-post">
+                <img src="img/f14c746a3d15a4cb2d10735a3334952.jpg" alt="Reflection Post 3" width="300" height="200" title="Picture related to gratitude">
+                <div class="post-content">
+                    <h3>感恩与幸福的关系</h3>
+                    <time datetime="2024-12-17">2024年12月17日</time>
+                    <p>感恩是充实生活的关键。当我们专注于我们所拥有的而不是我们所缺乏的时，我们就会向一个幸福的世界敞开心扉。这是关于每天注意到小小的祝福并感谢它们。</p>
+                </div>
+            </article>
+            <article class="reflection-post">
+                <img src="img/26b3fef6f522a8614d8ac92f8305865.jpg" alt="Reflection Post 3" width="300" height="200" title="Picture related to gratitude">
+                <div class="post-content">
+                    <h3>健身与自我重塑的联结</h3>
+                    <time datetime="2024-12-17">2024年12月17日</time>
+                    <p>健身是生活的活力源泉。专注其中，身心的积极变化皆是小确幸，感恩健身，它驱散阴霾，使生活充实且充满希望，让我们遇见更好的自己。</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Contact Info</h3>
+                <address>
+                    <p>Email: info@myblog.com</p>
+                    <p>Phone: 123-456-7890</p>
+                </address>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 My Blog. All rights reserved.</p>
+    </footer>
+    <script>
+       
+
+        const searchBar = document.querySelector('.search-bar input');
+
+        searchBar.addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+            reflectionPosts.forEach(function (post) {
+                const postTitle = post.querySelector('h3').textContent.toLowerCase();
+                const postContent = post.querySelector('p').textContent.toLowerCase();
+                if (postTitle.includes(searchTerm) || postContent.includes(searchTerm)) {
+                    post.style.display = 'flex';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

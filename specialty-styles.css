@@ -1,0 +1,444 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* 设置页面背景色为浅灰色，营造柔和氛围 */
+  }
+  
+  header {
+    background-color: #333; /* 头部背景设为深色，增加对比度 */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo h1 a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease; /* 添加过渡效果，鼠标悬停时颜色变化更平滑 */
+  }
+  
+  nav ul li a:hover {
+    color: #ccc; /* 鼠标悬停时链接颜色变浅灰色 */
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  #mingchao{
+    width: 200px;
+    height: 300px;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search-bar button {
+    background-color: #007bff; /* 搜索按钮背景色设为蓝色，突出显示 */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  h2{
+    text-align: center;
+  }
+  main {
+    padding: 20px;
+  }
+  
+  .interest-skills-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 让兴趣爱好和特长的展示区域两列布局 */
+    gap: 20px;
+  }
+  
+  .interest-skill-post {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* 添加阴影，增加立体感 */
+    overflow: hidden; /* 确保图片超出部分隐藏，布局更整齐 */
+    transition: transform 0.3s ease; /* 添加鼠标悬停时的缩放效果过渡 */
+  }
+  
+  .interest-skill-post:hover {
+    transform: scale(1.05); /* 鼠标悬停时稍微放大 */
+  }
+  
+  .interest-skill-post img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .post-content {
+    padding: 15px;
+  }
+  
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 页脚三列布局均分宽度 */
+    gap: 20px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .column h3 {
+    margin-bottom: 10px;
+  }
+  
+  .column ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .column ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .column ul li a:hover {
+    color: #ccc;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .copyright {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    margin: 0;
+  }
+  .modal {
+    display: none; /* 初始隐藏 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* think */
+  /* 响应式导航栏样式 */
+  @media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* 根据实际 logo 高度等调整 */
+        left: 0;
+        width: 100%;
+        background-color: #fff; /* 根据整体配色调整 */
+    }
+    nav ul.show {
+        display: flex;
+    }
+    nav button {
+        display: block;
+    }
+  }
+  
+  /* 文章区域样式 */
+  .entrepreneurship-post {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .entrepreneurship-post figure {
+    margin-right: 15px;
+    width: 30%; /* 图片大致占比，可调整 */
+  }
+  .entrepreneurship-post figure img {
+    width: 100%;
+    height: auto;
+  }
+  .entrepreneurship-post.post-content {
+    width: 70%; /* 文字内容大致占比，可调整 */
+  }
+  
+  /* 页脚样式 */
+  @media screen and (max-width: 768px) {
+  .footer-columns {
+        flex-direction: column;
+    }
+  .footer-columns.column {
+        margin-bottom: 15px;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333; /* 默认颜色，可根据整体配色调整 */
+    transition: color 0.3s ease; /* 颜色过渡效果 */
+  }
+  a:hover {
+    color: #007bff; /* 悬停时颜色 */
+    text-decoration: underline;
+  }
+  
+  .search-bar button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  /* 全局样式重置，去除浏览器默认边距和内边距，让页面布局更可控 */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif; /* 设置全局字体 */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* 页面背景色，可根据喜好调整 */
+    color: #333; /* 文字默认颜色 */
+  }
+  
+  /* 头部样式 */
+  header {
+    background-color: #000000; /* 头部背景色，与整体配色协调 */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影增加立体感 */
+  }
+  
+  .logo h1 a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #f8f9fa; /* 导航链接悬停颜色 */
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search-bar button {
+    background-color: #343a40; /* 搜索按钮背景色，与头部协调 */
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* 响应式导航栏样式，在小屏幕下变为下拉菜单形式 */
+  @media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* 根据实际 logo 高度等调整 */
+        left: 0;
+        width: 100%;
+        background-color: #007bff;
+    }
+  
+    nav ul.show {
+        display: flex;
+    }
+  
+    nav button {
+        display: block;
+    }
+  }
+  
+  /* 主体内容区域样式 */
+  main {
+    padding: 20px;
+  }
+  
+  .entrepreneurship-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #007bff; /* 标题颜色与整体风格统一 */
+  }
+  
+  .entrepreneurship-post {
+    background-color: white; /* 文章卡片背景色 */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 卡片阴影增加立体感 */
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden; /* 防止内容超出卡片边界显示异常 */
+  }
+  
+  .entrepreneurship-post figure {
+    margin-right: 15px;
+    width: 30%;
+  }
+  
+  .entrepreneurship-post figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px; /* 图片圆角效果，与卡片圆角呼应 */
+  }
+  
+  .entrepreneurship-post.post-content {
+    width: 70%;
+    padding: 15px;
+  }
+  
+  .entrepreneurship-post.post-content h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .entrepreneurship-post.post-content p {
+    font-size: 16px;
+  }
+  
+  /* 页脚样式 */
+  footer {
+    background-color: #343a40; /* 页脚背景色 */
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-columns.column {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-columns.column h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .footer-columns.column ul {
+    list-style: none;
+  }
+  
+  .footer-columns.column ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-columns.column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-columns.column ul li a:hover {
+    color: #adb5bd; /* 页脚链接悬停颜色 */
+  }
+  
+  .footer-columns.column.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* 模态框样式调整，使其视觉效果更融合 */
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  .modal-header {
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #dee2e6;
+  }
+  

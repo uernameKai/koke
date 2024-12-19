@@ -1,0 +1,200 @@
+ /* skill */
+  /* 全局样式 */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo h1 {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 28px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  nav ul li a:hover {
+    color: #ccc;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .search-bar input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+  }
+  
+  .search-bar button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-bar button:hover {
+    background-color: #777;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  img {
+   
+    object-fit: cover;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px; /* 图片设置圆角，与文章块风格统一 */
+}
+  
+  .skill-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-section h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .skill-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .skill-item h3 {
+    margin-top: 0;
+    cursor: pointer;
+    color: #555;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .skill-item h3:hover {
+    color: #333;
+  }
+  
+  .skill-item p {
+    margin-top: 10px;
+    display: none;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  .footer-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  .column h3 {
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .column ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .column ul li {
+    margin-bottom: 5px;
+  }
+  
+  .column ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .column ul li a:hover {
+    color: #ccc;
+  }
+  
+  .social-icons {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons li a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons li a:hover {
+    color: #ccc;
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  
